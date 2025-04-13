@@ -10,11 +10,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const VoiceAI = () => {
   const [autoRespond, setAutoRespond] = useState(true);
   const [voiceModel, setVoiceModel] = useState("Millis Natural");
-  const [apiKey, setApiKey] = useState("aznyFd54f8yroMB0mxZEws1K5giMYMat");
-  const [publicKey, setPublicKey] = useState(
-    "o8YhQPYM8u1ShlPh55ik2pQrHcOrdoPk",
-  );
-  const [agentId, setAgentId] = useState("-OLWMRYSG3zk8TWbIrLi");
+  const [apiKey, setApiKey] = useState("");
+  const [publicKey, setPublicKey] = useState("");
+  const [agentId, setAgentId] = useState("");
   const [voiceSpeed, setVoiceSpeed] = useState([50]);
   const [voicePitch, setVoicePitch] = useState([50]);
 
@@ -100,7 +98,7 @@ const VoiceAI = () => {
                       className="bg-white text-blue-600 hover:bg-white/90 font-medium px-6 py-3 rounded-md flex items-center"
                       onClick={() =>
                         window.open(
-                          "https://app.millis.ai/agents/embedded?id=-OLWMRYSG3zk8TWbIrLi&k=o8YhQPYM8u1ShlPh55ik2pQrHcOrdoPk&c=eJxlkN1qwzAMhV%2FFGAYJJGlsmm5NL%2FsIvd2NE7uumGMHWaFjpe8%2FB491P2AMR0f%2BfKQbJyBnIu9vHLQzvOcnUki84mPw3owE3qbi8Vs0TZNMXLzPzonCzO8Vh9T%2FE3N%2B7icY%2F3JIDc5grwPFX5TcXUen4mWlDQtR8McYVw8cpTdMY5jreFE6XIuWtUx28ztDO6hC7PZJSSbknm1Y1z6V5eHVD2p8sxgWr2uYlDU9c%2BCNwtqi0mA8FUJ02thqhRTbHctnw0SbCP%2BqL%2BILG1CvcUT6PQYHOmeQXVexx9U2clse0ozngFOeI4lHpKwjfKRdiV1bcULl44gwE%2B8JF5O2YywEnxqXWF9NJH7%2FBK5OhFI%3D",
+                          `https://app.millis.ai/agents/embedded?id=${agentId}&k=${publicKey}`,
                           "_blank",
                           "width=500,height=700",
                         )
@@ -132,7 +130,7 @@ const VoiceAI = () => {
                     className="border border-dashed border-slate-600 text-slate-300 px-4 py-2 rounded-md hover:bg-slate-800"
                     onClick={() =>
                       window.open(
-                        "https://app.millis.ai/agents/embedded?id=-OLWMRYSG3zk8TWbIrLi&k=o8YhQPYM8u1ShlPh55ik2pQrHcOrdoPk&c=eJxlkN1qwzAMhV%2FFGAYJJGlsmm5NL%2FsIvd2NE7uumGMHWaFjpe8%2FB491P2AMR0f%2BfKQbJyBnIu9vHLQzvOcnUki84mPw3owE3qbi8Vs0TZNMXLzPzonCzO8Vh9T%2FE3N%2B7icY%2F3JIDc5grwPFX5TcXUen4mWlDQtR8McYVw8cpTdMY5jreFE6XIuWtUx28ztDO6hC7PZJSSbknm1Y1z6V5eHVD2p8sxgWr2uYlDU9c%2BCNwtqi0mA8FUJ02thqhRTbHctnw0SbCP%2BqL%2BILG1CvcUT6PQYHOmeQXVexx9U2clse0ozngFOeI4lHpKwjfKRdiV1bcULl44gwE%2B8JF5O2YywEnxqXWF9NJH7%2FBK5OhFI%3D",
+                        `https://app.millis.ai/agents/embedded?id=${agentId}&k=${publicKey}`,
                         "_blank",
                       )
                     }

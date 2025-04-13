@@ -361,6 +361,7 @@ const LeadTable: React.FC<LeadTableProps> = ({
                         value={lead.score}
                         className="w-24 h-2"
                         style={{ backgroundColor: getScoreColor(lead.score) }}
+                        aria-label={`Lead score: ${lead.score}%`}
                       />
                     </div>
                   </td>

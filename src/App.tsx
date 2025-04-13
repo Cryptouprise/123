@@ -1,10 +1,10 @@
 import React, { Suspense } from "react";
-import { useRoutes, Routes, Route } from "react-router-dom";
+import { useRoutes, Routes, Route, HashRouter } from "react-router-dom";
 import Home from "./components/home";
 import Dashboard from "./pages/Dashboard";
 import { Toaster } from "@/components/ui/toaster";
 
-function App() {
+function AppRoutes() {
   // Only import routes when VITE_TEMPO is true
   const TempoRoutes = () => {
     const [routes, setRoutes] = React.useState(null);
@@ -54,6 +54,14 @@ function App() {
         <Toaster />
       </div>
     </Suspense>
+  );
+}
+
+function App() {
+  return (
+    <HashRouter>
+      <AppRoutes />
+    </HashRouter>
   );
 }
 
