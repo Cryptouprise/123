@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { useRoutes, Routes, Route, HashRouter } from "react-router-dom";
+import { useRoutes, Routes, Route } from "react-router-dom";
 import Home from "./components/home";
 import Dashboard from "./pages/Dashboard";
 import { Toaster } from "@/components/ui/toaster";
@@ -57,12 +57,9 @@ function AppRoutes() {
   );
 }
 
+// Removed the HashRouter from here since it's now in main.tsx
 function App() {
-  return (
-    <HashRouter>
-      <AppRoutes />
-    </HashRouter>
-  );
+  return <AppRoutes />;
 }
 
 export default App;
